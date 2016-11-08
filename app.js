@@ -1,5 +1,5 @@
 //imported & other variables
-var currencyString = require('./modules/functionExport');
+var randomUsd = require('./modules/functionExport');
 // var accountBalance = require('./modules/functionExport');
 var http = require('http');
 var portDecision = 3000;
@@ -7,9 +7,9 @@ var portDecision = 3000;
 
 //server set-up
 http.createServer(function(req, res) {
-  console.log(currencyString);
+  // console.log(currencyString);
   res.writeHead(200);
-  res.write("Account Balance: \n" + currencyString.currencyString);
+  res.write("Account Balance: \n" + randomUsd());
   res.end();
 }).listen(portDecision);
 
